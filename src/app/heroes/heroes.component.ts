@@ -10,12 +10,13 @@ import { HEROES } from '../mock-heros';
 })
 export class HeroesComponent implements OnInit {
   //hero is a type, with an interface imported from ../hero
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm',
-  };
+  selectedHero: Hero;
+
   //defining component property to expose HEROES array for binding
   heroes = HEROES;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 
   constructor() {}
 

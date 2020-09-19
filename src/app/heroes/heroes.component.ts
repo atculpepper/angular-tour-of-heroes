@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+//bring in the list of heroes
+import { HEROES } from '../mock-heros';
 
 @Component({
   selector: 'app-heroes',
@@ -12,6 +14,8 @@ export class HeroesComponent implements OnInit {
     id: 1,
     name: 'Windstorm',
   };
+  //defining component property to expose HEROES array for binding
+  heroes = HEROES;
 
   constructor() {}
 
